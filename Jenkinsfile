@@ -6,23 +6,23 @@ pipeline{
        
       steps  {
             sh '''
-            chmod +x envsetup.sh
-            ./envsetup.sh
-            '''}
+                echo "test 1"
+                
+                '''
         }
         stage('Setup Gunicorn Setup'){
             steps {
-                sh '''
-                chmod +x gunicorn.sh
-                ./gunicorn.sh
+               sh '''
+                echo "test 2"
+                
                 '''
             }
         }
         stage('setup NGINX'){
             steps {
                 sh '''
-                chmod +x nginx.sh
-                ./nginx.sh
+                echo "test 3"
+                
                 '''
             }
         }
